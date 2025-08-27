@@ -1,0 +1,378 @@
+
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      user-select: none;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+      min-height: 100vh;
+      perspective: 1500px;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: #00ffe7;
+      text-shadow: 0 0 10px #00ffe7aa;
+      margin-bottom: 3rem;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 3rem;
+    }
+
+    /* About Section */
+    .about {
+      background: rgba(255 255 255 / 0.05);
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 0 15px #00ffe7aa;
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease;
+    }
+    .about:hover {
+      transform: rotateY(15deg) rotateX(5deg) translateZ(20px);
+      box-shadow: 0 0 40px #00ffe7ff;
+    }
+
+    .about h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      border-bottom: 2px solid #00ffe7;
+      padding-bottom: 0.5rem;
+      letter-spacing: 0.1em;
+    }
+    .about p {
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    .social-links {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+    .social-links a {
+      color: #00ffe7;
+      text-decoration: none;
+      font-size: 1.6rem;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #00b5ad;
+    }
+
+    /* Skills Section */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 1.5rem;
+      perspective: 1200px;
+    }
+    .skill-card {
+      background: #0f2027;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px #00ffe7aa;
+      color: #00ffe7;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+    .skill-card:hover {
+      transform: rotateY(180deg) translateZ(20px);
+      box-shadow: 0 0 30px #00ffe7ff;
+    }
+    .skill-card .front,
+    .skill-card .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      top: 0; left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      padding: 1rem;
+    }
+    .skill-card .back {
+      transform: rotateY(180deg);
+      background: #00ffe7;
+      color: #0f2027;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    /* Projects Section */
+    .projects {
+      grid-column: 1 / -1;
+      margin-top: 4rem;
+      padding: 2rem;
+      background: rgba(255 255 255 / 0.05);
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00ffe7aa;
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease;
+    }
+    .projects:hover {
+      transform: rotateX(5deg) rotateY(-10deg) translateZ(25px);
+      box-shadow: 0 0 50px #00ffe7ff;
+    }
+    .projects h2 {
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #00ffe7;
+      padding-bottom: 0.5rem;
+      letter-spacing: 0.1em;
+    }
+    .project-item {
+      margin-bottom: 1.5rem;
+      background: #0f2027;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00ffe7aa;
+      transition: box-shadow 0.3s ease;
+    }
+    .project-item:hover {
+      box-shadow: 0 0 30px #00ffe7ff;
+    }
+    .project-item h3 {
+      margin-bottom: 0.5rem;
+      color: #00ffe7;
+    }
+    .project-item p {
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+    }
+    .project-item a {
+      color: #00b5ad;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .project-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact Section */
+    .contact {
+      grid-column: 1 / -1;
+      margin-top: 4rem;
+      background: rgba(255 255 255 / 0.05);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00ffe7aa;
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease;
+    }
+    .contact:hover {
+      transform: rotateX(-5deg) rotateY(10deg) translateZ(25px);
+      box-shadow: 0 0 50px #00ffe7ff;
+    }
+    .contact h2 {
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #00ffe7;
+      padding-bottom: 0.5rem;
+      letter-spacing: 0.1em;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      background: #203a43;
+      color: #fff;
+      box-shadow: inset 0 0 8px #00ffe7aa;
+      resize: vertical;
+      transition: box-shadow 0.3s ease;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 12px #00ffe7ff;
+    }
+    button {
+      background: #00ffe7;
+      color: #0f2027;
+      border: none;
+      padding: 0.85rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      align-self: flex-start;
+      box-shadow: 0 0 10px #00ffe7aa;
+    }
+    button:hover {
+      background: #00b5ad;
+      box-shadow: 0 0 20px #00b5ad;
+      color: #fff;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .skills {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      }
+    }
+    .footer {
+  margin-top: 4rem;
+  padding: 2rem;
+  text-align: center;
+  background: #0f2027;
+  color: #00ffe7;
+  box-shadow: 0 -2px 15px #00ffe7aa;
+  border-top: 2px solid #00ffe7;
+}
+
+.footer-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #00ffe7;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00b5ad;
+}
+/* Toggle Switch Style */
+.theme-toggle {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #00ffe7;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+body.light-mode {
+  background: linear-gradient(135deg, #f5f5f5, #eaeaea);
+  color: #0f2027;
+}
+
+body.light-mode header {
+  color: #0f2027;
+  text-shadow: none;
+}
+
+body.light-mode .about,
+body.light-mode .projects,
+body.light-mode .contact {
+  background: rgba(0, 0, 0, 0.05);
+  color: #0f2027;
+  box-shadow: 0 0 15px #aaa;
+}
+
+body.light-mode .project-item,
+body.light-mode .skill-card,
+body.light-mode input,
+body.light-mode textarea {
+  background: #fff;
+  color: #0f2027;
+  box-shadow: 0 0 8px #ccc;
+}
+
+body.light-mode .skill-card .back {
+  background: #00ffe7;
+  color: #0f2027;
+}
+
+body.light-mode button {
+  background: #0f2027;
+  color: #00ffe7;
+  box-shadow: 0 0 10px #aaa;
+}
+
+body.light-mode button:hover {
+  background: #00b5ad;
+  color: #fff;
+}
+
+body.light-mode .footer {
+  background: #eaeaea;
+  color: #0f2027;
+  box-shadow: 0 -2px 10px #ccc;
+  border-top: 2px solid #00ffe7;
+}
+
+body.light-mode .footer-links a {
+  color: #0f2027;
+}
+
+body.light-mode .footer-links a:hover {
+  color: #00b5ad;
+}
