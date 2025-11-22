@@ -1,43 +1,29 @@
-// =========================
-// EMAILJS - SEND MESSAGE
-// =========================
-
-// Attach listener to the form
+// ---------------- EMAIL SEND ----------------
 document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Get form fields
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+    const serviceID = "service_g55pxb8";       // e.g. service_abc123
+    const templateID = "service_g55pxb8";     // e.g. template_x1y2z3
 
-    // Prepare template fields for EmailJS
     const params = {
-        from_name: name,
-        from_email: email,
-        message: message
+        from_name: this.from_name.value,
+        from_email: this.from_email.value,
+        message: this.message.value
     };
 
-    // Your EmailJS IDs (PUT YOURS HERE)
-    const serviceID = "service_g55pxb8";
-    const templateID = "template_c3lg6yj";
-
-    // Send email using EmailJS
     emailjs.send(serviceID, templateID, params)
-        .then(function () {
-            alert("Your message has been sent successfully! ✨");
-            document.getElementById("contact-form").reset();
+        .then(() => {
+            alert("Message sent successfully!");
+            this.reset();
         })
-        .catch(function (error) {
-            console.error("EmailJS Error:", error);
-            alert("Oops! Something went wrong. Try again later.");
+        .catch((err) => {
+            console.error("EmailJS Error:", err);
+            alert("Failed to send message. Check console.");
         });
 });
 
 
-// =========================
-// SKILL CARD ACCESSIBILITY
-// =========================
+// ---------------- SKILL CARD HOVER ----------------
 const skillCards = document.querySelectorAll('.skill-card');
 skillCards.forEach(card => {
     card.addEventListener('focus', () => card.classList.add('hover'));
@@ -45,23 +31,19 @@ skillCards.forEach(card => {
 });
 
 
-// =========================
-// THEME SWITCHER
-// =========================
+// ---------------- THEME SWITCH ----------------
 const toggleSwitch = document.getElementById('theme-switch');
 const body = document.body;
 
-// Load user's saved theme
+// Load saved theme
 if (localStorage.getItem('theme') === 'light') {
     body.classList.add('light-mode');
     toggleSwitch.checked = true;
 }
 
-// Change theme on toggle
 toggleSwitch.addEventListener('change', () => {
     body.classList.toggle('light-mode');
 
-    // Save preference
     if (body.classList.contains('light-mode')) {
         localStorage.setItem('theme', 'light');
     } else {
