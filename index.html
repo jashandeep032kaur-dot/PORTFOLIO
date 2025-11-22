@@ -4,146 +4,129 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jashan Portfolio</title>
+
   <link rel="stylesheet" href="jk.css">
-   <script src="jash.js" defer></script>
+
+  <!-- EmailJS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <!-- Initialize EmailJS -->
+  <script>
+    (function () {
+      emailjs.init("YOUR_PUBLIC_KEY");  <!-- REPLACE THIS ONLY -->
+    })();
+  </script>
 </head>
 <body>
 
 <header>Jashandeep Kaur</header>
 
 <div class="container">
+
   <!-- About -->
   <section class="about" aria-label="About Me">
     <h2>About Me</h2>
     <p>
-      Hello! I'm a passionate and curious tech enthusiast who recently completed a B.Sc. in Artificial Intelligence and Data Science. I'm currently expanding my knowledge further by studying Artificial Intelligence and Machine Learning at NIELIT Ropar.
-
-I have hands-on experience in web development using HTML, CSS, and JavaScript, and I enjoy creating responsive and interactive websites. I also have a solid foundation in Python, and I'm continuously exploring the vast world of AI, machine learning, and related technologies.
-
-I'm always excited to learn something new every day and to work on projects that challenge me to grow as a developer and problem solver.
+      Hello! I'm a passionate and curious tech enthusiast who recently completed a B.Sc. in Artificial Intelligence and Data Science...
     </p>
-    <div class="social-links" aria-label="Social Links">
-      <a href="https://www.linkedin.com/in/jashandeep-kaur-06b698356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        &#128100; LinkedIn
-      </a>
-      <a href="https://github.com/jashandeep032kaur-dot" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        &#128187; GitHub
-      </a>
+
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/jashandeep-kaur-06b698356" target="_blank">LinkedIn</a>
+      <a href="https://github.com/jashandeep032kaur-dot" target="_blank">GitHub</a>
     </div>
   </section>
 
   <!-- Skills -->
-  <section class="skills" aria-label="Skills">
-    <div class="skill-card" tabindex="0">
-      <div class="front">Python</div>
-      <div class="back">Experienced in automation, scripting & AI</div>
-    </div>
-    <div class="skill-card" tabindex="0">
-      <div class="front">CSS</div>
-      <div class="back">Stylish, responsive designs</div>
-    </div>
-    <div class="skill-card" tabindex="0">
-      <div class="front">HTML</div>
-      <div class="back">Semantic & accessible markup</div>
-    </div>
-    <div class="skill-card" tabindex="0">
-      <div class="front">NumPy</div>
-      <div class="back">Efficient numerical computing</div>
-    </div>
-    <div class="skill-card" tabindex="0">
-      <div class="front">Pandas</div>
-      <div class="back">Data manipulation expert</div>
-    </div>
-    <div class="skill-card" tabindex="0">
-      <div class="front">Matplotlib</div>
-      <div class="back">Data visualization wizard</div>
-    </div>
-    <div class="skill-card" tabindex="0">
-      <div class="front">AI</div>
-      <div class="back">Machine learning & neural nets</div>
-    </div>
+  <section class="skills">
+    <div class="skill-card" tabindex="0"><div class="front">Python</div><div class="back">Experienced in automation, scripting & AI</div></div>
+    <div class="skill-card" tabindex="0"><div class="front">CSS</div><div class="back">Stylish, responsive designs</div></div>
+    <div class="skill-card" tabindex="0"><div class="front">HTML</div><div class="back">Semantic & accessible markup</div></div>
+    <div class="skill-card" tabindex="0"><div class="front">NumPy</div><div class="back">Efficient numerical computing</div></div>
+    <div class="skill-card" tabindex="0"><div class="front">Pandas</div><div class="back">Data manipulation expert</div></div>
+    <div class="skill-card" tabindex="0"><div class="front">Matplotlib</div><div class="back">Data visualization wizard</div></div>
+    <div class="skill-card" tabindex="0"><div class="front">AI</div><div class="back">Machine learning & neural nets</div></div>
   </section>
 
   <!-- Projects -->
-  <section class="projects" aria-label="Projects">
-    <h2>Projects and certifications </h2>
+  <section class="projects">
+    <h2>Projects and certifications</h2>
+
     <article class="project-item">
       <h3>Interactive 3D Portfolio</h3>
-      <p>A responsive and interactive portfolio using 3D CSS transforms, showcasing skills and projects with smooth animations.</p>
-      <a href="https://github.com/jashandeep032kaur-dot" target="_blank" rel="noopener noreferrer">View Project</a>
+      <p>Responsive portfolio using 3D CSS transforms.</p>
+      <a href="https://github.com/jashandeep032kaur-dot" target="_blank">View Project</a>
     </article>
-    <article class="project-item">g
-      <h3>Data Analysis using numpy aND python</h3>
-      <p>Analyis of patient dataset using python and numpy in which I am trying to extracing the useful insights from data also using maplotlib for visualizating the useful insights or dta .</p>
-      <a href="https://github.com/jashandeep032kaur-dot" target="_blank" rel="noopener noreferrer">View Project</a>
+
+    <article class="project-item">
+      <h3>Data Analysis using NumPy</h3>
+      <p>Analyzing patient dataset using Python, NumPy & Matplotlib.</p>
+      <a href="https://github.com/jashandeep032kaur-dot" target="_blank">View Project</a>
     </article>
-    <article class="project-item">g
-      <h3>Machine learning onramp</h3>
-      <p> I have completed the machine learning onramp from mathworks.com using matlab .</p>
-      <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=19d1715f-e2b8-421f-8ae5-ef9645348bf3&" target="_blank" rel="noopener noreferrer">View Project</a>
+
+    <article class="project-item">
+      <h3>Machine Learning Onramp</h3>
+      <p>Completed ML Onramp course using MATLAB.</p>
+      <a href="#" target="_blank">View Project</a>
     </article>
-    <article class="project-item">g
-      <h3>MATLAB  onramp</h3>
-      <p> I have completed the MATLAB onramp from mathworks.com using matlab .</p>
-      <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=686c7481-3830-44e8-8b8b-202f73baac35&" target="_blank" rel="noopener noreferrer">View Project</a>
+
+    <article class="project-item">
+      <h3>MATLAB Onramp</h3>
+      <p>Completed MATLAB Onramp from MathWorks.</p>
+      <a href="#" target="_blank">View Project</a>
     </article>
-    <article class="project-item">g
-      <h3>Heart disease prediction</h3>
-      <p> This is my heart disease prediction model using machine learning where I trained model using dataset and deploy my trained model on huggingface.</p>
+
+    <article class="project-item">
+      <h3>Heart Disease Prediction</h3>
+      <p>ML model deployed on HuggingFace.</p>
       <a href="https://huggingface.co/spaces/Jashan-hf-ai/heart_disease_prediction_model2">View Project</a>
     </article>
-     <article class="project-item">g
-      <h3>object detection</h3>
-      <p> this is my object detection model using openCV in which i used pretrained YOLO model and deploy it on huggingface.</p>
+
+    <article class="project-item">
+      <h3>Object Detection (YOLO)</h3>
+      <p>YOLO-based object detection using OpenCV.</p>
       <a href="https://huggingface.co/spaces/Jashan-hf-ai/object-detection">View Project</a>
     </article>
-    <article class="project-item">g
-      <h3>Web Scraping project </h3>
-      <p> this is my website scraping project using libraries of python like beautifulsoup where you can extract and analyze any data rfom websites.</p>
+
+    <article class="project-item">
+      <h3>Web Scraping Project</h3>
+      <p>Extract and analyze data using BeautifulSoup.</p>
       <a href="https://huggingface.co/spaces/Jashan-hf-ai/news-scraping">View Project</a>
     </article>
-    <article class="project-item">g
-      <h3>Iris-Flower predicton project  </h3>
-      <p> built a machine learing model using python and scikit-learn to predict Iris flower species based on petal and sepal chracterstics.</p>
+
+    <article class="project-item">
+      <h3>Iris Flower Prediction</h3>
+      <p>Predicting Iris species using ML.</p>
       <a href="https://huggingface.co/spaces/Jashan-hf-ai/iris_flower_prediction">View Project</a>
     </article>
+
   </section>
 
   <!-- Contact -->
-  <section class="contact" aria-label="Contact Me">
+  <section class="contact">
     <h2>Contact Me</h2>
-    <form id="contact-form" action="#" method="POST" novalidate>
-      <input type="text" name="name" placeholder="Your Name" required aria-required="true" />
-      <input type="email" name="email" placeholder="Your Email" required aria-required="true" />
-      <textarea name="message" rows="5" placeholder="Your Message" required aria-required="true"></textarea>
-      <button type="submit" aria-label="Send Message">Send</button>
+
+    <form id="contact-form" method="POST" novalidate>
+      <input type="text" name="from_name" placeholder="Your Name" required />
+      <input type="email" name="from_email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
     </form>
   </section>
+
 </div>
-<footer class="footer" aria-label="Footer">
+
+<footer class="footer">
   <p>&copy; 2025 Jashandeep Kaur. All rights reserved.</p>
-  <div class="footer-links">
-    <a href="jashandeep032kaur@gmail.com" aria-label="Email">📧 Email</a>
-    <a href="https://www.linkedin.com/in/jashandeep-kaur-06b698356" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">🔗 LinkedIn</a>
-    <a href="https://github.com/jashandeep032kaur-dot" target="_blank" rel="noopener noreferrer" aria-label="GitHub">💻 GitHub</a>
-  </div>
 </footer>
+
 <div class="theme-toggle">
   <label class="switch">
-    <input type="checkbox" id="theme-switch">
+    <input type="checkbox" id="theme-switch" />
     <span class="slider"></span>
   </label>
 </div>
-  <!-- EMAILJS SCRIPT -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-<script>
-  (function() {
-      emailjs.init("CoRnRZTvf5hgOV87L");  
-  })();
-</script>
-
-<!-- YOUR JS -->
+<!-- Main JS -->
 <script src="jash.js"></script>
 
 </body>
