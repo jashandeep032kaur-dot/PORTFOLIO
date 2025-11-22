@@ -19,8 +19,8 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     };
 
     // Your EmailJS IDs (PUT YOURS HERE)
-    const serviceID = "YOUR_SERVICE_ID";
-    const templateID = "YOUR_TEMPLATE_ID";
+    const serviceID = "service_g55pxb8";
+    const templateID = "template_c3lg6yj";
 
     // Send email using EmailJS
     emailjs.send(serviceID, templateID, params)
