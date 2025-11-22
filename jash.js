@@ -1,9 +1,10 @@
-// ---------------- EMAIL SEND ----------------
+// -------------------- CONTACT FORM EMAILJS --------------------
 document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const serviceID = "service_g55pxb8";       // e.g. service_abc123
-    const templateID = "service_g55pxb8";     // e.g. template_x1y2z3
+    // 🚀 Replace these two with your actual EmailJS values
+    const serviceID = "service_g55pxb8";      // YOUR SERVICE ID
+    const templateID = "template_c3lg6yj";    // YOUR TEMPLATE ID
 
     const params = {
         from_name: this.from_name.value,
@@ -13,7 +14,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
 
     emailjs.send(serviceID, templateID, params)
         .then(() => {
-            alert("Message sent successfully!");
+            alert("Your message has been sent successfully!");
             this.reset();
         })
         .catch((err) => {
@@ -23,7 +24,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
 });
 
 
-// ---------------- SKILL CARD HOVER ----------------
+// -------------------- SKILL CARD ACCESSIBILITY --------------------
 const skillCards = document.querySelectorAll('.skill-card');
 skillCards.forEach(card => {
     card.addEventListener('focus', () => card.classList.add('hover'));
@@ -31,7 +32,7 @@ skillCards.forEach(card => {
 });
 
 
-// ---------------- THEME SWITCH ----------------
+// -------------------- THEME TOGGLE --------------------
 const toggleSwitch = document.getElementById('theme-switch');
 const body = document.body;
 
